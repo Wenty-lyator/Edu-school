@@ -1,0 +1,163 @@
+body{
+  font-family: 'Open Sans',sans-serif;
+}
+
+.wrapper {
+   max-width: 1350px;
+   margin: 0 auto;
+   padding: 0 25px;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   margin: 20px 0;
+   padding: 10px;
+}
+
+.table-resp {
+   overflow-x: auto;
+}
+
+.table td, .table th {
+   padding: 7px 10px;
+}
+
+.table-bordered td, .table-bordered th {
+   border: 1px solid #dee2e6;
+}
+
+td {
+   padding: 5px;
+}
+
+// повторяющиеся стили
+
+.text__content {
+   display: flex;
+   flex-direction: column;
+   padding: 40px 0;
+}
+
+.title {
+   margin: 0 0 30px;
+   text-align: center;
+   line-height: 1.3;
+   text-transform: uppercase;
+   font-size: 26px;
+   color: #4C5665;
+}
+
+.subtitle {
+   color: #808080;
+   font-size: 2rem;
+   font-weight: 500;
+   line-height: 1.2;
+}
+
+.subtext {
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #007bff;
+   margin: 10px 0;
+   &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+   }
+}
+
+.text {
+   margin-bottom: 10px;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #212529;
+   &-str {
+      font-weight: bolder;
+      margin: 10px 0;
+   }
+   &-cent {
+      text-align: center;
+   }
+}
+
+.about {
+   padding: 30px 0;
+}
+
+.about-logo {
+   width: 115px;
+   height: 115px;
+   margin: 15px auto;
+}
+
+// тоже повторяющиеся стили
+
+.templ {
+   padding: 30px 0;
+   margin: 10px 0;
+	&__title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      color: #626f82;
+      font-size: 26px;
+      line-height: 1.3;
+	}
+	&__items {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr 1fr 1fr;
+	}
+	&__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+   }
+	&__images {
+      width: 280px;
+      transition: all .5s;
+      // что то эксперементировал, не получилось, дергается
+      // &:hover {
+      //    position: absolute;
+      //    width: 300px;
+      // }
+      &:hover {
+         opacity: 0.7;
+      }
+      &-bord {
+         border: 1px solid #DDD; 
+      }
+	}
+	&__text {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 14px;
+      color: #212529;
+	}
+}
+
+@media (max-width: 1330px){
+   .templ__items {
+      grid-template: 1fr 1fr / 1fr 1fr;
+   }
+}
+
+@media (max-width: 720px){
+   .templ__items {
+      grid-template: 1fr 1fr 1fr / 1fr;
+   }  
+}
+
+@media (max-width: 350px){
+   .templ__item, .templ__images {
+      max-width: 85%;
+      margin: 10px auto;
+   }
+}
